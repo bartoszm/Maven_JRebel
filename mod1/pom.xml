@@ -9,6 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <properties>
+        <maven.greeter.name>Pati</maven.greeter.name>
+    </properties>
+
     <artifactId>mod1</artifactId>
     <dependencies>
         <dependency>
@@ -26,4 +30,23 @@
         </dependency>
     </dependencies>
 
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <!--<includes>-->
+                    <!--<include>simple.properties</include>-->
+                <!--</includes>-->
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+    <profiles>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <maven.greeter.name>Mr. X</maven.greeter.name>
+            </properties>
+        </profile>
+    </profiles>
 </project>

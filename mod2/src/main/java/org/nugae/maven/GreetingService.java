@@ -1,5 +1,6 @@
 package org.nugae.maven;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,8 +10,14 @@ import org.springframework.stereotype.Service;
  */
 @Service("greeting")
 class GreetingService implements SimpleService {
+
+    @Value("${greeter.name}")
+    private String name;
+
     @Override
     public String doMagic() {
-        return "hello";
+        return "hello " + name;
     }
+
+
 }

@@ -4,10 +4,11 @@
 	<classpath>
 		<dir name="F:/spaces/amt/maven_jrebel/mod1/target/classes">
             <exclude name="*.xml" />
+            <exclude name="*.properties" />
 		</dir>
         <dir name="F:/spaces/amt/maven_jrebel/mod1/src/main/resources">
             <exclude name="rebel.xml" />
-            <include name="*.xml" />
+            <include name="*" />
         </dir>
 	</classpath>
 

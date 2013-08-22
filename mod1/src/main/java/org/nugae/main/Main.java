@@ -12,11 +12,14 @@ import java.util.concurrent.TimeUnit;
  */
 public class Main {
     public static void main(String[] args) throws InterruptedException {
+
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         while(true) {
             Executor exe = ctx.getBean(Executor.class);
+
             exe.run();
             TimeUnit.SECONDS.sleep(3);
+
         }
     }
 }
